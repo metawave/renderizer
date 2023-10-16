@@ -9,6 +9,7 @@ builds:
       - linux
     goarch:
       - amd64
+      - arm64
     ldflags: '-s -w -X main.version={{.Version}} -X main.tag={{.Tag}} -X main.commitHash={{.FullCommit}} -X main.commitTime={{ index .Env "COMMIT_TIME" }} -X main.buildTime={{ time "20060102T150405" }}'
 
 dist: build/dist
@@ -65,7 +66,7 @@ brews:
       # Optionally a token can be provided, if it differs from the token provided to GoReleaser
       token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
 
-    url_template: "https://github.com/gomatic/renderizer/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
+    url_template: "https://github.com/metawave/renderizer/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
 
     # Git author used to commit to the repository.
     # Defaults are shown.
@@ -79,7 +80,7 @@ brews:
 
     # Your app's homepage.
     # Default is empty.
-    homepage: "https://github.com/gomatic/renderizer"
+    homepage: "https://github.com/metawave/renderizer"
 
     # Your app's description.
     # Default is empty.
