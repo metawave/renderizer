@@ -1,6 +1,6 @@
 export APP_NAME := $(notdir $(shell pwd))
 DESC :=
-PROJECT_URL := "https://github.com/gomatic/$(APP_NAME)"
+PROJECT_URL := "https://github.com/metawave/$(APP_NAME)"
 
 ROOT := $(shell git rev-parse --show-toplevel)
 include $(ROOT)/.env.mk
